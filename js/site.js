@@ -204,11 +204,15 @@
       : '<div class="project-hero-placeholder">Cover image coming soon</div>';
 
     const video = project.video
-      ? '<video class="project-video" controls preload="metadata" src="' +
+      ? '<figure class="project-video-wrap"><video class="project-video" controls preload="metadata" src="' +
         escapeHtml(encodePath(project.video)) +
         '"><a href="' +
         escapeHtml(encodePath(project.video)) +
-        '">Open the project video</a></video>'
+        '">Open the project video</a></video>' +
+        (project.videoCaption
+          ? "<figcaption>" + escapeHtml(project.videoCaption) + "</figcaption>"
+          : "") +
+        "</figure>"
       : "";
 
     root.innerHTML =

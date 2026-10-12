@@ -441,6 +441,7 @@ body[data-page="home"] .wrap {
 }
 
 .project-hero {
+  max-width: 46rem;
   margin: 28px 0 44px;
 }
 
@@ -482,7 +483,12 @@ body[data-page="home"] .wrap {
 }
 
 .project-gallery-section {
-  max-width: none;
+  max-width: 46rem;
+}
+
+.project-video-wrap {
+  max-width: 46rem;
+  margin: 8px 0 0;
 }
 
 .project-video {

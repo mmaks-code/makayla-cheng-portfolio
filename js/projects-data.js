@@ -90,11 +90,12 @@ window.PORTFOLIO = {
     {
       slug: "spectrophotometer",
       title: "Spectrophotometer",
-      subtitle: "BE 2700 — Final Project",
+      subtitle: "BE 2700: Final Project",
       category: "biomedical",
       order: 3,
-      thumbnail: "assets/images/projects/spectrophotometer/cover.jpg",
-      hero: "assets/images/projects/spectrophotometer/cover.jpg",
+      thumbnail: "assets/images/projects/spectrophotometer/cover.png",
+      thumbnailFit: "contain",
+      hero: "assets/images/projects/spectrophotometer/cover.png",
       heroCaption: "Spectrophotometer prototype with the sample compartment open.",
       gallery: [
         {
@@ -193,7 +194,7 @@ window.PORTFOLIO = {
     {
       slug: "airalux",
       title: "Therapeutic Spirometry Device: Airalux",
-      subtitle: "Airalux — Technical Internship",
+      subtitle: "Airalux: Technical Internship",
       category: "biomedical",
       order: 4,
       thumbnail: "assets/images/projects/airalux/cover.png",
@@ -265,7 +266,7 @@ window.PORTFOLIO = {
             "Electromechanical Systems",
             "Robotic Motion",
             "Robot Programming",
-            "Hardware–Software Integration",
+            "Hardware-Software Integration",
           ],
         },
       ],
@@ -273,7 +274,7 @@ window.PORTFOLIO = {
     {
       slug: "human-cockroach-interface",
       title: "Human-Cockroach Interface",
-      subtitle: "BE 3090 — Final Project",
+      subtitle: "BE 3090: Final Project",
       category: "robotics",
       order: 2,
       thumbnail: "assets/images/projects/human-cockroach-interface/cover.jpg",
@@ -320,7 +321,7 @@ window.PORTFOLIO = {
     {
       slug: "morse-code-interpreter",
       title: "Morse Code Interpreter Using Raspberry Pi",
-      subtitle: "BE 3100 — Final Project",
+      subtitle: "BE 3100: Final Project",
       category: "embedded",
       order: 1,
       thumbnail: "assets/images/projects/morse-code-interpreter/cover.jpg",
@@ -345,7 +346,7 @@ window.PORTFOLIO = {
         {
           id: "overview",
           title: "Project Overview",
-          body: "For my BE 3100 final project, I developed an interactive Morse code decoder and game designed for children with speech development challenges. The goal was to explore an alternative method of communication using muscle activity rather than spoken words. I integrated electromyography (EMG) electrodes with a Raspberry Pi to detect muscle flexing, using a short flex to represent a dot and a longer flex to represent a dash in Morse code. These signals could then be decoded and incorporated into an interactive game to help children practice communicating through muscle-based inputs. I worked on the CAD design, electronic circuitry, Raspberry Pi programming, Bluetooth integration, and overall hardware–software system. This project introduced me to embedded systems development and demonstrated how accessible technology can be designed around alternative forms of human input.",
+          body: "For my BE 3100 final project, I developed an interactive Morse code decoder and game designed for children with speech development challenges. The goal was to explore an alternative method of communication using muscle activity rather than spoken words. I integrated electromyography (EMG) electrodes with a Raspberry Pi to detect muscle flexing, using a short flex to represent a dot and a longer flex to represent a dash in Morse code. These signals could then be decoded and incorporated into an interactive game to help children practice communicating through muscle-based inputs. I worked on the CAD design, electronic circuitry, Raspberry Pi programming, Bluetooth integration, and overall hardware-software system. This project introduced me to embedded systems development and demonstrated how accessible technology can be designed around alternative forms of human input.",
         },
         {
           id: "skills",
@@ -359,8 +360,8 @@ window.PORTFOLIO = {
             "Circuit Design",
             "CAD",
             "Bluetooth Communication",
-            "Hardware–Software Integration",
-            "Human–Computer Interaction",
+            "Hardware-Software Integration",
+            "Human-Computer Interaction",
             "Assistive Technology",
           ],
         },
@@ -376,6 +377,8 @@ window.PORTFOLIO = {
       hero: "assets/images/projects/seed-cleaner/cover.jpg",
       heroCaption: "Seed-cleaning prototype with a hopper and wooden stand.",
       gallery: [],
+      video: "assets/images/projects/seed-cleaner/IMG_4068.MOV",
+      videoCaption: "Demonstration of the seed cleaner with a vacuum hose attached.",
       media: {
         cad: "assets/images/projects/seed-cleaner/cad.svg",
         prototype: "assets/images/projects/seed-cleaner/prototype.svg",
