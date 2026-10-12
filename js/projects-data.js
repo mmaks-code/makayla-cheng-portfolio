@@ -94,7 +94,6 @@ window.PORTFOLIO = {
       category: "biomedical",
       order: 3,
       thumbnail: "assets/images/projects/spectrophotometer/cover.png",
-      thumbnailFit: "contain",
       hero: "assets/images/projects/spectrophotometer/cover.png",
       heroCaption: "Spectrophotometer prototype with the sample compartment open.",
       gallery: [
@@ -198,7 +197,6 @@ window.PORTFOLIO = {
       category: "biomedical",
       order: 4,
       thumbnail: "assets/images/projects/airalux/cover.png",
-      thumbnailFit: "contain",
       hero: "assets/images/projects/airalux/cover.png",
       heroCaption: "Concept rendering of the spirometry device and companion app.",
       gallery: [],
