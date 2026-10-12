@@ -1,0 +1,7 @@
+Replace makayla-portrait.svg with your photograph.
+
+Recommended filename: makayla-portrait.jpg (or .png)
+Then update the image src in:
+  - index.html
+  - about.html
+  - js/projects-data.js (person.portrait)

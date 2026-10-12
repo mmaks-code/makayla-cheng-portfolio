@@ -1,0 +1,10 @@
+Put this project's images in this folder.
+
+Cover thumbnail and hero image: a file with "cover" in the name
+(cover.jpg, cover.jpeg, cover.png, or cover.webp).
+
+Additional photos and diagrams: any other images in this folder.
+They can be added to the Project Gallery in js/projects-data.js.
+
+Only add images you are comfortable sharing publicly.
+Do not include proprietary Medtronic files.

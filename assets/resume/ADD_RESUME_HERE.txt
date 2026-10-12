@@ -1,0 +1,6 @@
+The Resume page uses this file:
+
+Makayla Cheng's Resume Robotics.pdf
+
+The download button, Open Resume link, and embedded viewer all point here.
+To update the resume, replace this PDF and keep the same filename.

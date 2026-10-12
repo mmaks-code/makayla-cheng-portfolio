@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Resume of Makayla Cheng, bioengineering student at the University of Pennsylvania.">
+    <title>Resume | Makayla Cheng</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body data-page="resume">
+    <a class="skip-link" href="#content">Skip to content</a>
+    <header class="site-header wrap">
+      <a class="brand" href="index.html">Makayla Cheng</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="resume.html" aria-current="page">Resume</a>
+        <a href="about.html">About Me</a>
+      </nav>
+    </header>
+    <main id="content" class="wrap page">
+      <div class="resume-layout">
+        <h1>Resume</h1>
+        <p class="resume-lead">View or download my resume below.</p>
+        <div class="resume-actions">
+          <a class="button" href="assets/resume/Makayla%20Cheng's%20Resume%20Robotics.pdf" download="Makayla Cheng's Resume Robotics.pdf">Download Resume</a>
+          <a class="resume-open" href="assets/resume/Makayla%20Cheng's%20Resume%20Robotics.pdf" target="_blank" rel="noopener noreferrer">Open Resume</a>
+        </div>
+        <div class="resume-viewer">
+          <iframe id="resume-frame" title="Makayla Cheng resume PDF" src="assets/resume/Makayla%20Cheng's%20Resume%20Robotics.pdf"></iframe>
+          <p id="resume-missing" class="resume-fallback" hidden>The resume could not be displayed here. <a href="assets/resume/Makayla%20Cheng's%20Resume%20Robotics.pdf" target="_blank" rel="noopener noreferrer">Open the resume in a new tab</a>.</p>
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer wrap">
+      <span>&copy; <span id="year"></span> Makayla Cheng</span>
+      <span>Bioengineering · University of Pennsylvania</span>
+    </footer>
+    <script src="js/projects-data.js"></script>
+    <script src="js/site.js"></script>
+  </body>
+</html>
