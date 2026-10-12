@@ -9,6 +9,7 @@
   --placeholder-text: #6a6a66;
   --max: 1100px;
   --radius: 8px;
+  --project-media: 480px;
 }
 
 *,
@@ -441,8 +442,8 @@ body[data-page="home"] .wrap {
 }
 
 .project-hero {
-  width: fit-content;
-  max-width: min(360px, 100%);
+  width: min(var(--project-media), 100%);
+  max-width: min(var(--project-media), 100%);
   margin: 20px auto 28px;
 }
 
@@ -454,40 +455,27 @@ body[data-page="home"] .wrap {
 
 .project-hero img {
   display: block;
-  width: auto;
+  width: 100%;
   height: auto;
-  max-width: 100%;
-  max-height: 270px;
-  aspect-ratio: auto;
-  object-fit: contain;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
   background: #f3f3f3;
   border-radius: 8px;
 }
 
-.project-hero.is-portrait {
-  width: min(360px, 100%);
-}
-
-.project-hero.is-portrait img {
-  width: 100%;
-  height: 270px;
-  max-width: none;
-  max-height: none;
-  object-fit: cover;
-  object-position: center;
-}
-
 .project-hero-placeholder {
   aspect-ratio: 4 / 3;
-  width: min(360px, 100%);
-  max-height: 270px;
+  width: min(var(--project-media), 100%);
+  height: auto;
   margin: 20px auto 28px;
   border-radius: 8px;
 }
 
 .project-gallery {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, var(--project-media)));
+  justify-content: center;
   column-gap: 28px;
   row-gap: 28px;
   margin-top: 8px;
@@ -505,12 +493,10 @@ body[data-page="home"] .wrap {
 
 .project-gallery img {
   display: block;
-  width: auto;
+  width: 100%;
   height: auto;
-  max-width: 100%;
-  max-height: 560px;
-  margin-inline: auto;
-  object-fit: contain;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
   object-position: center;
   background: #f3f3f3;
   border-radius: 8px;
@@ -520,16 +506,23 @@ body[data-page="home"] .wrap {
   max-width: none;
 }
 
+.project-section#video {
+  max-width: none;
+}
+
 .project-video-wrap {
-  max-width: 46rem;
-  margin: 8px 0 0;
+  width: min(var(--project-media), 100%);
+  margin: 8px auto 0;
 }
 
 .project-video {
   display: block;
-  width: 100%;
-  max-width: 46rem;
-  margin-top: 8px;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: var(--project-media);
+  object-fit: contain;
+  margin: 0 auto;
   background: #111;
   border-radius: 8px;
 }
