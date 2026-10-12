@@ -164,13 +164,18 @@
     const galleryItems = gallery
       .map(function (image) {
         const caption = image.caption || "Caption: add a description of this image.";
+        const src = escapeHtml(encodePath(image.src));
         return (
           "<figure>" +
+          '<a href="' +
+          src +
+          '" target="_blank" rel="noopener noreferrer">' +
           '<img src="' +
-          escapeHtml(encodePath(image.src)) +
+          src +
           '" alt="' +
           escapeHtml(image.caption || "Additional image for " + project.title) +
           '">' +
+          "</a>" +
           "<figcaption>" +
           escapeHtml(caption) +
           "</figcaption>" +
@@ -238,6 +243,17 @@
           "</ul></section>"
         : "") +
       '<p><a class="back-link project-back-end" href="projects.html">Back to Projects</a></p>';
+
+    const heroImg = root.querySelector(".project-hero img");
+    if (heroImg) {
+      const markPortraitCover = function () {
+        if (heroImg.naturalHeight > heroImg.naturalWidth) {
+          heroImg.closest(".project-hero").classList.add("is-portrait");
+        }
+      };
+      if (heroImg.complete && heroImg.naturalWidth) markPortraitCover();
+      else heroImg.addEventListener("load", markPortraitCover);
+    }
   }
 
   function initResume() {
