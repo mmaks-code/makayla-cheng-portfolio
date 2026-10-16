@@ -31,10 +31,6 @@ window.PORTFOLIO = {
       name: "Robotics & Electromechanical Systems",
     },
     {
-      id: "embedded",
-      name: "Embedded Systems & Electronics",
-    },
-    {
       id: "humanitarian",
       name: "Community Service",
     },
@@ -332,8 +328,8 @@ window.PORTFOLIO = {
       slug: "morse-code-interpreter",
       title: "Morse Code Interpreter Using Raspberry Pi",
       subtitle: "BE 3100: Final Project",
-      category: "embedded",
-      order: 1,
+      category: "biomedical",
+      order: 5,
       thumbnail: "assets/images/projects/morse-code-interpreter/cover.jpg",
       hero: "assets/images/projects/morse-code-interpreter/cover.jpg",
       heroCaption: "Morse code game running on the project enclosure.",
