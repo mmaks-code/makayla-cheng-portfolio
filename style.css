@@ -798,6 +798,10 @@ body[data-page="about"] {
   line-height: 1.35;
 }
 
+.about-columns h3.skill-group {
+  margin-top: 22px;
+}
+
 .about-columns p {
   margin: 0 0 14px;
 }

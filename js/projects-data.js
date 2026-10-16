@@ -38,6 +38,10 @@ window.PORTFOLIO = {
       id: "humanitarian",
       name: "Community Service",
     },
+    {
+      id: "creative",
+      name: "Creative Design & Fabrication",
+    },
   ],
 
   projects: [
@@ -53,11 +57,11 @@ window.PORTFOLIO = {
       gallery: [
         {
           src: "assets/images/projects/automated-catheter-test-method/IMG_1735.jpg",
-          caption: "Test setup with the fixture positioned over a water bath.",
+          caption: "Electromechanical verification fixture positioned over a water bath.",
         },
         {
           src: "assets/images/projects/automated-catheter-test-method/IMG_1749.jpg",
-          caption: "Close-up of the fixture carriage and wired electrical connections.",
+          caption: "Carriage and wired connections on the motorized test fixture.",
         },
       ],
       video: "assets/images/projects/automated-catheter-test-method/IMG_1784.MOV",
@@ -66,21 +70,24 @@ window.PORTFOLIO = {
       sections: [
         {
           id: "overview",
-          title: "Project Overview",
-          body: "During my summer internship as a Mechanical Design R&D Intern at Medtronic, I developed an automated design verification test method for a cardiac ablation catheter. The project focused on investigating surgeon-reported wire failures and improving the repeatability and efficiency of mechanical testing. I designed and built a custom electromechanical test fixture integrating SolidWorks-designed components, 3D-printed parts, embedded microcontrollers, and motorized actuation. I also conducted verification testing and fatigue characterization to investigate potential failure mechanisms and developed standardized test procedures to support future R&D validation. This experience strengthened my understanding of medical device development, mechanical design, test automation, and engineering verification.",
+          title: "Project Description",
+          body: "During my Mechanical Design R&D internship at Medtronic, I developed an automated design verification test method for a cardiac ablation catheter to investigate surgeon-reported wire failures. I used SolidWorks to design mechanical components for a custom electromechanical test fixture and performed GD&T and tolerance stack-up analysis for the catheter cage to evaluate dimensional variation and assembly requirements. I built and tested the fixture using 3D-printed components, microcontrollers, and motorized actuation, supporting repeatable fatigue testing and failure investigation. I also developed standardized test procedures and engineering documentation.",
         },
         {
           id: "skills",
           title: "Technical Skills Used",
           items: [
-            "SolidWorks / CAD",
+            "SolidWorks",
             "Mechanical Design",
-            "Electromechanical System Design",
-            "3D Printing & Rapid Prototyping",
+            "GD&T",
+            "Tolerance Stack-Up Analysis",
+            "Design Verification",
+            "Electromechanical Systems",
+            "Rapid Prototyping",
+            "3D Printing",
             "Microcontrollers",
             "Motorized Actuation",
             "Test Automation",
-            "Design Verification & Validation",
             "Fatigue Testing",
             "Engineering Documentation",
           ],
@@ -92,22 +99,22 @@ window.PORTFOLIO = {
       title: "Spectrophotometer",
       subtitle: "BE 2700: Final Project",
       category: "biomedical",
-      order: 3,
+      order: 4,
       thumbnail: "assets/images/projects/spectrophotometer/cover.png",
       hero: "assets/images/projects/spectrophotometer/cover.png",
       heroCaption: "Spectrophotometer prototype with the sample compartment open.",
       gallery: [
         {
-          src: "assets/images/projects/spectrophotometer/IMG_8802.jpg",
-          caption: "Closed enclosure with the display, power switch, and start button.",
+          src: "assets/images/projects/spectrophotometer/Screenshot 2026-10-11 at 10.39.38\u202fPM.png",
+          caption: "CAD model of the spectrophotometer enclosure.",
         },
         {
           src: "assets/images/projects/spectrophotometer/Screenshot 2026-10-11 at 10.38.37\u202fPM.png",
-          caption: "Dimensioned drawing of the spectrophotometer enclosure.",
+          caption: "Dimensioned engineering drawing of the spectrophotometer enclosure.",
         },
         {
-          src: "assets/images/projects/spectrophotometer/Screenshot 2026-10-11 at 10.39.38\u202fPM.png",
-          caption: "CAD model of the spectrophotometer enclosure.",
+          src: "assets/images/projects/spectrophotometer/IMG_8802.jpg",
+          caption: "Assembled enclosure with the display, power switch, and start button.",
         },
       ],
       media: {
@@ -121,23 +128,25 @@ window.PORTFOLIO = {
       sections: [
         {
           id: "overview",
-          title: "Project Overview",
-          body: "For my BE 2700 final project at the University of Pennsylvania, I designed, built, and programmed a spectrophotometer from scratch to measure light absorbance. I was responsible for developing the physical device, integrating the necessary electronic components, and writing the code used to collect and calculate absorbance measurements. The project required me to combine hardware design, circuitry, programming, and experimental testing into a functional analytical instrument. After building and calibrating the device, I was able to obtain accurate absorbance readings. This project gave me valuable experience developing a complete biomedical instrumentation system, from the initial design and assembly to software integration and performance testing.",
+          title: "Project Description",
+          body: "For my BE 2700 final project, I designed and built a spectrophotometer from scratch to measure light absorbance. I designed the enclosure in CAD, produced a dimensioned drawing of the housing, and fabricated the physical instrument around the optics and electronics. I integrated the electronic components and wrote the code that collects and calculates absorbance measurements. After calibration, the device produced accurate readings. The project combined enclosure design, prototyping, circuitry, and optical measurement in one working instrument.",
         },
         {
           id: "skills",
           title: "Technical Skills Used",
           items: [
+            "CAD",
+            "Mechanical Design",
+            "Enclosure Design",
+            "Prototyping",
+            "Hardware Integration",
             "Biomedical Instrumentation",
             "Electronic Circuit Design",
-            "Hardware Integration",
             "Programming",
             "Optical Measurements",
             "Absorbance Measurement",
             "Calibration",
             "Experimental Testing",
-            "Prototyping",
-            "System Integration",
           ],
         },
       ],
@@ -155,7 +164,7 @@ window.PORTFOLIO = {
       gallery: [
         {
           src: "assets/images/projects/3d-steerable-needle/Screenshot 2026-10-11 at 11.18.56\u202fPM.png",
-          caption: "Needle tip with overlaid direction axes.",
+          caption: "Needle tip with overlaid axes for checking steering direction.",
         },
       ],
       media: {
@@ -169,21 +178,23 @@ window.PORTFOLIO = {
       sections: [
         {
           id: "overview",
-          title: "Project Overview",
-          body: "As an undergraduate researcher in the Yim Research Lab at the University of Pennsylvania, I have been working on the development of a novel 3D-steerable surgical needle designed for minimally invasive procedures. The project explores how mechanical design and robotic actuation can enable more precise navigation through tissue. I have contributed to the design and iterative prototyping of a tape-spring-based steering mechanism, using CAD, mechatronics, and experimental testing to evaluate its performance. I have also applied machine learning techniques to characterize steering behavior and improve trajectory accuracy. Through this research, I have gained hands-on experience developing and evaluating robotic medical technologies at the intersection of mechanical engineering, robotics, and healthcare.",
+          title: "Project Description",
+          body: "In Penn's Yim Research Lab, I designed the complete 3D-steerable surgical needle in CAD, developing its mechanical architecture around a tape-spring steering mechanism. I also designed custom testing enclosures and iteratively refined the mechanical components through prototyping and experimental evaluation. By integrating precision mechanical design, mechatronic actuation, and trajectory modeling, I worked to improve steering accuracy for minimally invasive surgical applications.",
         },
         {
           id: "skills",
           title: "Technical Skills Used",
           items: [
-            "SolidWorks / CAD",
+            "SolidWorks",
             "Mechanical Design",
+            "Assembly Design",
+            "Precision Mechanisms",
+            "Tape-Spring Mechanisms",
+            "Rapid Prototyping",
             "Mechatronics",
             "Robotic Actuation",
-            "Rapid Prototyping",
-            "Tape-Spring Mechanisms",
-            "Machine Learning",
             "Experimental Testing",
+            "Machine Learning",
             "Data Analysis",
             "Surgical Robotics",
           ],
@@ -195,7 +206,7 @@ window.PORTFOLIO = {
       title: "Therapeutic Spirometry Device: Airalux",
       subtitle: "Airalux: Technical Internship",
       category: "biomedical",
-      order: 4,
+      order: 3,
       thumbnail: "assets/images/projects/airalux/cover.png",
       hero: "assets/images/projects/airalux/cover.png",
       heroCaption: "Concept rendering of the spirometry device and companion app.",
@@ -211,23 +222,24 @@ window.PORTFOLIO = {
       sections: [
         {
           id: "overview",
-          title: "Project Overview",
-          body: "During my technical internship at Airalux, I contributed to the development of a therapeutic spirometry device intended to support respiratory care. I worked closely with the clinical needs assessment and product development process, conducting more than 100 interviews with nurses, respiratory therapists, and hospital staff to understand usability challenges, workflow constraints, and unmet needs. I translated this feedback into engineering requirements and design-for-manufacturing improvements, while also supporting prototype verification and iterative product development. This experience taught me the importance of incorporating clinician feedback into medical device design and balancing technical functionality with usability, manufacturability, and real-world clinical requirements.",
+          title: "Project Description",
+          body: "At Airalux, I contributed to the mechanical design and development of a therapeutic spirometry device, including designing its mouthpiece in CAD to improve patient usability. I translated clinician feedback into functional design requirements and iteratively refined physical components through prototyping and design-for-manufacturing considerations. This experience allowed me to connect clinical needs with practical mechanical design decisions while improving the usability and manufacturability of a medical device.",
         },
         {
           id: "skills",
           title: "Technical Skills Used",
           items: [
-            "Medical Device Product Development",
-            "Human-Centered Design",
+            "CAD",
+            "Mechanical Design",
+            "Medical Device Design",
+            "Ergonomics",
+            "Design for Manufacturing",
+            "Prototyping",
+            "Design Iteration",
+            "Prototype Verification",
+            "Engineering Requirements",
             "Clinical Needs Assessment",
             "User Interviews",
-            "Engineering Requirements",
-            "Design for Manufacturing",
-            "Prototype Verification",
-            "Design Iteration",
-            "Product Usability",
-            "Cross-Functional Collaboration",
           ],
         },
       ],
@@ -253,16 +265,16 @@ window.PORTFOLIO = {
       sections: [
         {
           id: "overview",
-          title: "Project Overview",
-          body: "This project involved working with the Franka Panda robotic arm to explore robotic manipulation and the integration of mechanical hardware with software-based control. Through hands-on interaction with the robotic system, I developed experience working with a multi-joint robotic manipulator and gained a deeper understanding of how robotic motion is coordinated and executed. The project provided an opportunity to apply concepts in robotics, programming, and electromechanical systems to a physical robotic platform.",
+          title: "Project Description",
+          body: "I worked with a Franka Panda robotic arm to study how a multi-joint manipulator coordinates motion. I operated and programmed the arm, focusing on joint motion, robotic manipulation, and electromechanical integration between the mechanical hardware and the control software. The work was with the existing commercial arm: understanding how its joints move and how software drives that hardware.",
         },
         {
           id: "skills",
           title: "Technical Skills Used",
           items: [
-            "Robotic Manipulation",
             "Electromechanical Systems",
-            "Robotic Motion",
+            "Robotic Manipulation",
+            "Manipulator Motion",
             "Robot Programming",
             "Hardware-Software Integration",
           ],
@@ -295,23 +307,23 @@ window.PORTFOLIO = {
       sections: [
         {
           id: "overview",
-          title: "Project Overview",
-          body: "For my BE 3090 final project, my team and I developed a creative human-cockroach interface inspired by the television show Dancing with the Stars. The project combined biological signals, electronics, and electromechanical systems to explore the interaction between a human participant and a cockroach through an experimental dance-themed setup. I worked with electromyography (EMG) signals, BioPac instrumentation, oscilloscopes, and electronic circuits to acquire and analyze signals and integrate them with the project's hardware. I also contributed to CAD design and the development of the experimental setup. This project provided hands-on experience in biomedical signal acquisition, circuit development, electromechanical integration, and working with biological systems in an experimental environment.",
+          title: "Project Description",
+          body: "For my BE 3090 final project, my team built a human-cockroach interface, inspired by Dancing with the Stars, linking a human muscle signal to a physical experimental setup. I contributed the CAD for the platform and the hardware that held the setup together. I acquired electromyography signals with BioPac instrumentation and an oscilloscope, built the supporting circuits, and integrated those signals with the electromechanical hardware during experimental testing.",
         },
         {
           id: "skills",
           title: "Technical Skills Used",
           items: [
+            "CAD",
+            "Electromechanical Systems",
+            "Hardware Integration",
             "Electromyography (EMG)",
             "BioPac",
             "Oscilloscope",
             "Circuit Design",
             "Biomedical Signal Acquisition",
-            "Electromechanical Systems",
-            "CAD",
             "Experimental Design",
             "Animal Studies",
-            "Hardware Integration",
           ],
         },
       ],
@@ -328,8 +340,16 @@ window.PORTFOLIO = {
       video: "assets/images/projects/morse-code-interpreter/video.MOV",
       gallery: [
         {
+          src: "assets/images/projects/morse-code-interpreter/cad.PNG",
+          caption: "CAD model of the enclosure, with the angled screen opening and front panel.",
+        },
+        {
+          src: "assets/images/projects/morse-code-interpreter/morse drawing.png",
+          caption: "Dimensioned assembly drawing of the laser-cut acrylic enclosure.",
+        },
+        {
           src: "assets/images/projects/morse-code-interpreter/IMG_4551.jpg",
-          caption: "Enclosure beside the laptop used for the Morse code interface.",
+          caption: "Project enclosure beside the laptop used to run the Morse code interface.",
         },
       ],
       media: {
@@ -343,23 +363,24 @@ window.PORTFOLIO = {
       sections: [
         {
           id: "overview",
-          title: "Project Overview",
-          body: "For my BE 3100 final project, I developed an interactive Morse code decoder and game designed for children with speech development challenges. The goal was to explore an alternative method of communication using muscle activity rather than spoken words. I integrated electromyography (EMG) electrodes with a Raspberry Pi to detect muscle flexing, using a short flex to represent a dot and a longer flex to represent a dash in Morse code. These signals could then be decoded and incorporated into an interactive game to help children practice communicating through muscle-based inputs. I worked on the CAD design, electronic circuitry, Raspberry Pi programming, Bluetooth integration, and overall hardware-software system. This project introduced me to embedded systems development and demonstrated how accessible technology can be designed around alternative forms of human input.",
+          title: "Project Description",
+          body: "For my BE 3100 final project, I built an interactive Morse code decoder and game for children with speech development challenges. A short muscle flex represented a dot and a longer flex a dash. I worked on the CAD and packaged the electronics in a physical enclosure for the game. I integrated EMG electrodes with a Raspberry Pi, designed the circuitry, and programmed the Pi, including Bluetooth, so muscle activity could be decoded as Morse code.",
         },
         {
           id: "skills",
           title: "Technical Skills Used",
           items: [
+            "CAD",
+            "Enclosure Design",
+            "Prototyping",
+            "Hardware-Software Integration",
             "Raspberry Pi",
             "Embedded Systems",
             "Python Programming",
             "Electromyography (EMG)",
             "Biomedical Signal Processing",
             "Circuit Design",
-            "CAD",
             "Bluetooth Communication",
-            "Hardware-Software Integration",
-            "Human-Computer Interaction",
             "Assistive Technology",
           ],
         },
@@ -388,21 +409,19 @@ window.PORTFOLIO = {
       sections: [
         {
           id: "overview",
-          title: "Project Overview",
-          body: "Through Engineers Without Borders at the University of Pennsylvania, I worked on a community-based engineering project in partnership with Novick Farms in Philadelphia. Novick Farms focuses on early education for elementary school students and is working to expand its small farm with support from our engineering team. As part of this collaboration, I contributed to the development of a seed-cleaning device intended to support the farm's agricultural operations. The project involved applying engineering design and prototyping to a practical community need while considering the constraints of a small urban farm. This experience showed me how engineering can support local organizations and create tangible improvements for community-based agriculture and education.",
+          title: "Project Description",
+          body: "With Engineers Without Borders at Penn, I partnered with Novick Farms in Philadelphia on a seed cleaner for a small urban farm that teaches elementary students. I contributed to the mechanical design of the device. The prototype uses a hopper and a wooden stand and runs with a vacuum hose attached. I iterated with 3D printing and hands-on prototyping so the cleaner would fit how the farm actually works.",
         },
         {
           id: "skills",
           title: "Technical Skills Used",
           items: [
-            "Engineering Design",
+            "Mechanical Design",
             "3D Printing",
             "Rapid Prototyping",
-            "Mechanical Design",
             "Design Iteration",
-            "Problem-Solving",
+            "Engineering Design",
             "Community-Centered Engineering",
-            "Sustainable Engineering",
           ],
         },
       ],
@@ -423,7 +442,7 @@ window.PORTFOLIO = {
         },
         {
           src: "assets/images/projects/vertical-planting-boxes/Screenshot 2026-10-11 at 10.35.26\u202fPM.png",
-          caption: "Assembly drawing of the planter box.",
+          caption: "Assembly drawing documenting how the wooden planter box goes together.",
         },
       ],
       media: {
@@ -437,8 +456,8 @@ window.PORTFOLIO = {
       sections: [
         {
           id: "overview",
-          title: "Project Overview",
-          body: "Through Engineers Without Borders at the University of Pennsylvania, I collaborated with Novick Farms in Philadelphia on a project supporting the growth and development of its small urban farm. Novick Farms emphasizes early education for elementary school students, and our team worked to help the organization expand its growing capacity through practical engineering solutions. I contributed to the development of wooden planting boxes intended to support the farm's growing needs and make productive use of available space. This project involved hands-on building, collaborative problem-solving, and designing for the needs of a community partner. It was a meaningful opportunity to apply engineering skills outside the classroom while supporting local agriculture and educational initiatives.",
+          title: "Project Description",
+          body: "On the same Engineers Without Borders partnership with Novick Farms, I contributed to wooden planting boxes that added growing space on the farm. I took part in the physical design, woodworking, and mechanical assembly of the boxes. An assembly drawing documents how the pieces go together. The work was hands-on fabrication for a community partner, built around the space and materials available on site.",
         },
         {
           id: "skills",
@@ -451,7 +470,48 @@ window.PORTFOLIO = {
             "Prototyping",
             "Team Collaboration",
             "Community-Centered Design",
-            "Sustainable Agriculture",
+          ],
+        },
+      ],
+    },
+    {
+      slug: "fruit-basket-puzzle",
+      title: "3D Fruit Basket Puzzle",
+      subtitle: "Rhino CAD Design & Digital Fabrication",
+      category: "creative",
+      order: 1,
+      thumbnail: "assets/images/projects/fruit-basket-puzzle/cover.jpg",
+      hero: "assets/images/projects/fruit-basket-puzzle/cover.jpg",
+      heroCaption: "Finished fruit basket puzzle, assembled from the individual fruit pieces.",
+      gallery: [
+        {
+          src: "assets/images/projects/fruit-basket-puzzle/Technical Fruit Basket Puzzle CAD Layout.png",
+          caption: "Rhino top-view layout of the circular puzzle, with separate red outlines for each fruit, leaf, and center piece.",
+        },
+        {
+          src: "assets/images/projects/fruit-basket-puzzle/fabrication.jpg",
+          caption: "Laser-cut and 3D-printed puzzle components.",
+          optional: true,
+        },
+      ],
+      documentation: [],
+      sections: [
+        {
+          id: "overview",
+          title: "Project Description",
+          body: "I designed and fabricated a custom fruit-themed puzzle entirely in Rhino 3D, creating the overall circular assembly and individual fruit-inspired components through CAD modeling. I developed separate part geometries for fabrication using laser cutting and 3D printing, then assembled the pieces into a cohesive physical design. Through rapid prototyping and iterative refinement, I explored component geometry, fit, and fabrication techniques while transforming a creative concept into a functional, visually engaging puzzle.",
+        },
+        {
+          id: "skills",
+          title: "Technical Skills Used",
+          items: [
+            "Rhino 3D",
+            "CAD Modeling",
+            "Laser Cutting",
+            "3D Printing",
+            "Digital Fabrication",
+            "Rapid Prototyping",
+            "Design Iteration",
           ],
         },
       ],

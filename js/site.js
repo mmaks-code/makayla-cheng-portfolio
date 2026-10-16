@@ -71,13 +71,19 @@
         const cards = items
           .map(function (project) {
             const thumb = project.thumbnail
-              ? '<img src="' +
-                escapeHtml(encodePath(project.thumbnail)) +
-                '" alt="' +
-                escapeHtml(project.title) +
-                ' cover image"' +
-                (project.thumbnailFit === "contain" ? ' class="is-contain"' : "") +
-                ">"
+              ? project.thumbnailOptional
+                ? '<div class="thumb-placeholder" data-optional-src="' +
+                  escapeHtml(encodePath(project.thumbnail)) +
+                  '" data-optional-alt="' +
+                  escapeHtml(project.title + " cover image") +
+                  '">Image coming soon</div>'
+                : '<img src="' +
+                  escapeHtml(encodePath(project.thumbnail)) +
+                  '" alt="' +
+                  escapeHtml(project.title) +
+                  ' cover image"' +
+                  (project.thumbnailFit === "contain" ? ' class="is-contain"' : "") +
+                  ">"
               : '<div class="thumb-placeholder">Image coming soon</div>';
             return (
               '<a class="project-card" href="' +
@@ -110,6 +116,50 @@
         );
       })
       .join("");
+
+    upgradeOptionalImages(root);
+  }
+
+  function whenImageLoads(src) {
+    return new Promise(function (resolve) {
+      const probe = new Image();
+      probe.onload = function () {
+        resolve(true);
+      };
+      probe.onerror = function () {
+        resolve(false);
+      };
+      probe.src = src;
+    });
+  }
+
+  function upgradeOptionalImages(root) {
+    root.querySelectorAll("[data-optional-src]").forEach(function (placeholder) {
+      const src = placeholder.getAttribute("data-optional-src");
+      const alt = placeholder.getAttribute("data-optional-alt") || "";
+      whenImageLoads(src).then(function (ok) {
+        if (!ok || !placeholder.isConnected) return;
+        const img = document.createElement("img");
+        img.src = src;
+        img.alt = alt;
+        if (placeholder.classList.contains("thumb-placeholder")) {
+          placeholder.replaceWith(img);
+          return;
+        }
+        const figure = document.createElement("figure");
+        figure.className = "project-hero";
+        img.alt = alt;
+        figure.appendChild(img);
+        const caption = placeholder.getAttribute("data-optional-caption");
+        if (caption) {
+          const figcaption = document.createElement("figcaption");
+          figcaption.textContent = caption;
+          figure.appendChild(figcaption);
+        }
+        placeholder.replaceWith(figure);
+        if (img.naturalHeight > img.naturalWidth) figure.classList.add("is-portrait");
+      });
+    });
   }
 
   function renderProjectPage() {
@@ -160,7 +210,12 @@
       })
       .join("");
 
-    const gallery = project.gallery || [];
+    const gallery = (project.gallery || []).filter(function (image) {
+      return !image.optional;
+    });
+    const optionalGallery = (project.gallery || []).filter(function (image) {
+      return image.optional;
+    });
     const galleryItems = gallery
       .map(function (image) {
         const caption = image.caption || "Caption: add a description of this image.";
@@ -197,15 +252,25 @@
       .join("");
 
     const hero = project.hero
-      ? '<figure class="project-hero"><img src="' +
-        escapeHtml(encodePath(project.hero)) +
-        '" alt="' +
-        escapeHtml(project.heroCaption || "Cover image for " + project.title) +
-        '">' +
-        (project.heroCaption
-          ? "<figcaption>" + escapeHtml(project.heroCaption) + "</figcaption>"
-          : "") +
-        "</figure>"
+      ? project.heroOptional
+        ? '<div class="project-hero-placeholder" data-optional-src="' +
+          escapeHtml(encodePath(project.hero)) +
+          '" data-optional-alt="' +
+          escapeHtml(project.heroCaption || "Cover image for " + project.title) +
+          '"' +
+          (project.heroCaption
+            ? ' data-optional-caption="' + escapeHtml(project.heroCaption) + '"'
+            : "") +
+          ">Cover image coming soon</div>"
+        : '<figure class="project-hero"><img src="' +
+          escapeHtml(encodePath(project.hero)) +
+          '" alt="' +
+          escapeHtml(project.heroCaption || "Cover image for " + project.title) +
+          '">' +
+          (project.heroCaption
+            ? "<figcaption>" + escapeHtml(project.heroCaption) + "</figcaption>"
+            : "") +
+          "</figure>"
       : '<div class="project-hero-placeholder">Cover image coming soon</div>';
 
     const video = project.video
@@ -254,6 +319,57 @@
       if (heroImg.complete && heroImg.naturalWidth) markPortraitCover();
       else heroImg.addEventListener("load", markPortraitCover);
     }
+
+    upgradeOptionalImages(root);
+    mountOptionalGallery(root, optionalGallery);
+  }
+
+  function mountOptionalGallery(root, images) {
+    if (!images.length) return;
+    Promise.all(
+      images.map(function (image) {
+        const src = encodePath(image.src);
+        return whenImageLoads(src).then(function (ok) {
+          return ok ? { image: image, src: src } : null;
+        });
+      })
+    ).then(function (ready) {
+      const available = ready.filter(Boolean);
+      if (!available.length || !root.isConnected) return;
+      let gallery = root.querySelector(".project-gallery");
+      if (!gallery) {
+        const section = document.createElement("section");
+        section.className = "project-section project-gallery-section";
+        section.id = "gallery";
+        section.innerHTML = "<h2>Project Gallery</h2>";
+        gallery = document.createElement("div");
+        gallery.className = "project-gallery";
+        section.appendChild(gallery);
+        const video = root.querySelector("#video");
+        const endLink = root.querySelector(".project-back-end");
+        if (video) video.before(section);
+        else if (endLink) endLink.before(section);
+        else root.appendChild(section);
+      }
+      available.forEach(function (item) {
+        const figure = document.createElement("figure");
+        const link = document.createElement("a");
+        link.href = item.src;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        const img = document.createElement("img");
+        img.src = item.src;
+        img.alt = item.image.caption || "Additional project image";
+        link.appendChild(img);
+        figure.appendChild(link);
+        if (item.image.caption) {
+          const caption = document.createElement("figcaption");
+          caption.textContent = item.image.caption;
+          figure.appendChild(caption);
+        }
+        gallery.appendChild(figure);
+      });
+    });
   }
 
   function initResume() {
